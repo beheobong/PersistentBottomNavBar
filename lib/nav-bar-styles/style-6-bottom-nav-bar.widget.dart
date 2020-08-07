@@ -104,6 +104,7 @@ class _BottomNavStyle6State extends State<BottomNavStyle6>
                                   child: Text(
                                     item.title,
                                     style: TextStyle(
+                                      fontFamily : 'GoogleSans',
                                         color: isSelected
                                             ? (item.activeContentColor == null
                                                 ? item.activeColor
