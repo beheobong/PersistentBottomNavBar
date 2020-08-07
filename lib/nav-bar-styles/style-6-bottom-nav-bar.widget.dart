@@ -66,15 +66,11 @@ class _BottomNavStyle6State extends State<BottomNavStyle6>
     });
   }
 
-  Widget _buildItem(PersistentBottomNavBarItem item, bool isSelected,
+    Widget _buildItem(PersistentBottomNavBarItem item, bool isSelected,
       double height, int itemIndex) {
     return widget.navBarHeight == 0
         ? SizedBox.shrink()
-        : AnimatedBuilder(
-            animation: _animationList[itemIndex],
-            builder: (context, child) => Transform.scale(
-              scale: _animationList[itemIndex].value,
-              child: Container(
+        : Container(
                 width: 150.0,
                 height: height,
                 child: Container(
@@ -101,7 +97,7 @@ class _BottomNavStyle6State extends State<BottomNavStyle6>
                       item.title == null
                           ? SizedBox.shrink()
                           : Padding(
-                              padding: const EdgeInsets.only(top: 15.0),
+                              padding: const EdgeInsets.only(top: 5.0),
                               child: Material(
                                 type: MaterialType.transparency,
                                 child: FittedBox(
@@ -122,9 +118,7 @@ class _BottomNavStyle6State extends State<BottomNavStyle6>
                     ],
                   ),
                 ),
-              ),
-            ),
-          );
+              );
   }
 
   @override
